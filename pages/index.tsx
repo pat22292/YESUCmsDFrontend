@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic'
 import axios from 'axios';
 import { connect } from "react-redux"
-import { setProducts, setSelectedProductsNull, showSections } from "../redux/actions/product"
+import { setProducts, setSelectedProductsNull, showMenus, showSections } from "../redux/actions/product"
 import { motion } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
 import { options } from 'next-auth/client';
@@ -23,6 +23,11 @@ const spring = {
 const DynamicTable = dynamic(() => import('../components/table'),
       { loading: () => <p>...</p> }
 )
+
+const DynamicCenteredMenubar = dynamic(() => import('../components/navigation/CenteredLogoNavBar'),
+      { loading: () => <p>...</p> }
+)
+
 function Home(props) {
       const router = useRouter();
 
@@ -33,6 +38,7 @@ function Home(props) {
 
       useEffect(() => {
             props.showSections();
+            props.showMenus()
 
       }, []);
 
@@ -42,7 +48,7 @@ function Home(props) {
 
                   {/* <DynamicTable products={props.product.sections} setSelectedProductsNull={_setSelectedProductsNull} /> */}
 
-                  <CenteredLogoNavBar Logo={''} style={''} menus={''} />
+                  <DynamicCenteredMenubar Logo={props.product.menus} style={''} menus={props.product.menus} />
                   {/* {parse(props.product.sections[0].section)} */}
                   {/* <button onClick={() => { console.log(props.product.sections[0].section) }}>Click</button> */}
             </div>
@@ -60,6 +66,7 @@ const mapDispatchToProps = {
       setProducts: setProducts,
       setSelectedProductsNull: setSelectedProductsNull,
       showSections: showSections,
+      showMenus: showMenus
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)

@@ -39,6 +39,7 @@ export const CALC_DISTANCE = "CALC_DISTANCE";
 
 export const SHOW_SECTIONS = "SHOW_SECTIONS";
 
+export const SHOW_MENUS = "SHOW_MENUS";
 
 
 

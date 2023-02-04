@@ -1,0 +1,20 @@
+[ { "name": "Home",
+    "link": "#"
+    },
+    { "name": "About",
+    "link": "#"
+    },
+    { "name": "Products",
+    "link": "#"
+    },
+    { "name": "Pricing",
+    "link": "#"
+    },
+    { "name": "Contact",
+    "link": "#"
+    },
+    { "name": "Galleries",
+    "link": "#"
+    }
+
+]

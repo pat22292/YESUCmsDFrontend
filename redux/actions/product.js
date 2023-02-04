@@ -83,6 +83,24 @@ export const showSections = (id) => async dispatch => {
     }
 }
 
+export const showMenus = () => async dispatch => {
+    try {
+        const apiResponse = await axios.get(process.env.API_URL + `show-menus`);
+        dispatch({
+            type: t.SHOW_MENUS,
+            payload: apiResponse.data
+        })
+
+        console.log(apiResponse.data);
+    } catch (error) {
+        console.log(error);
+        dispatch({
+            type: t.SHOW_MENUS,
+            payload: error
+        })
+    }
+}
+
 export const setSelectedProductsNull = (data) => ({
     type: t.SET_SELECTED_PRODUCTS_NULL,
     payload: data

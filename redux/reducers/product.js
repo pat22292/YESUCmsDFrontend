@@ -11,7 +11,8 @@ const product = (state = {
     tempVariation: [],
     tempGallery: [],
     tempVarImgs: [],
-    sections: []
+    sections: [],
+    menus: []
 
 }, action) => {
     switch (action.type) {
@@ -68,6 +69,11 @@ const product = (state = {
             return {
                 ...state,
                 sections: action.payload
+            }
+            case t.SHOW_MENUS:
+                return {
+                ...state,
+                menus: action.payload
             }
         default:
             return { ...state };
