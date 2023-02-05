@@ -2,27 +2,50 @@ import React, { useEffect, useState } from "react";
 import CircularLoading from '../../loading/circularLoading';
 
 export default function CenteredLogoNavBar({ Logo, style, menus }) {
+
+  // const [menuCountm, setMenuCount] = useState(menus.list.length());
     return (
 
         <div>
         {Logo.length != 0 ? (
           <div >
-  
             {Logo.map((menus, index) => {
   
               // <li key={index}>{product}</li>
-  
+              <h1>
+            
+            </h1>
               return <div key={index} >
-  
+            
+                 <nav className="bg-white  py-2  ">
+                 
+                 <div className="  mx-auto">
+       <div className="hidden w-full  md:grid justify-items-center" id="navbar-default">
+        <h1>{menus.length}</h1>
+       <ul className="flex mt-4 flex-row md:space-x-36 ">
               {menus.list.map((menu, indx) => {
-                return <span>
-                    <p key={indx}>{menu.name}</p>
-                </span>
+                return <div>
+
+                  
+                  <li key={indx} className='h-16 pt-4'>
+                      
+                      {menu.name}
+        
+                        </li>
+                  </div>
+                    
+                
+                 
               } )}
-  
+  </ul>
+  </div>
+  </div>
+  </nav>
               </div>
             })}
+            
           </div>
+
         ) : (
           <div className=' h-16 pt-4'>
             <CircularLoading />
