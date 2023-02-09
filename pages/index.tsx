@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic';
 import axios from 'axios';
-import { connect } from "react-redux"
-import { setProducts, setSelectedProductsNull, showMenus, showSections } from "../redux/actions/product"
+import { connect } from "react-redux";
+import { setProducts, setSelectedProductsNull, showMenus, showSections } from "../redux/actions/product";
 import { motion } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
 import { options } from 'next-auth/client';
@@ -49,6 +49,7 @@ function Home(props) {
                   {/* <DynamicTable products={props.product.sections} setSelectedProductsNull={_setSelectedProductsNull} /> */}
 
                   <DynamicCenteredMenubar Logo={props.product.menus} style={''} menus={props.product.menus} />
+                  {/* {props.product.menuList ? <h1>Meron</h1> : <h1>Wala</h1>  } */}
                   {/* {parse(props.product.sections[0].section)} */}
                   {/* <button onClick={() => { console.log(props.product.sections[0].section) }}>Click</button> */}
             </div>

@@ -1,42 +1,87 @@
 import React, { useEffect, useState } from "react";
 import CircularLoading from '../../loading/circularLoading';
+import { connect } from "react-redux";
+import { setProducts, setSelectedProductsNull, showMenus, showSections } from "../../redux/actions/product";
 
-export default function CenteredLogoNavBar({ Logo, style, menus }) {
 
+function CenteredLogoNavBar(props) {
+
+  // const [navData, setNavData ] = useState(Logo);
+  const { nav, setNav } = props;
+  const [navList, setNavList] = useState([]);
+
+
+
+
+  useEffect(() => {
+    
+    // console.log(props.product.menuList);
+    // props.product.menus.length != 0 ? console.log('meron') : console.log('wala');
+
+}, []);
   // const [menuCountm, setMenuCount] = useState(menus.list.length());
     return (
 
         <div>
-        {Logo.length != 0 ? (
+        {props.product.menus.length != 0 ? (
           <div >
-            {Logo.map((menus, index) => {
+            {/* <p>{props.product.menuList}</p> */}
+{/* <h1>{props.product.name}</h1> */}
+            {props.product.menus.map((menus, index) => {
   
               // <li key={index}>{product}</li>
-              <h1>
-            
-            </h1>
+         
               return <div key={index} >
-            
+        
                  <nav className="bg-white  py-2  ">
                  
                  <div className="  mx-auto">
        <div className="hidden w-full  md:grid justify-items-center" id="navbar-default">
-        <h1>{menus.length}</h1>
+      
        <ul className="flex mt-4 flex-row md:space-x-36 ">
+       
               {menus.list.map((menu, indx) => {
-                return <div>
-
-                  
-                  <li key={indx} className='h-16 pt-4'>
-                      
-                      {menu.name}
-        
-                        </li>
-                  </div>
-                    
-                
+                // {indx < props.product.menus[0].list.length / 2  ? 
                  
-              } )}
+                   return (
+                    indx < props.product.menus[0].list.length / 2 ?  
+  <li key={indx} className={`h-16 pt-4`}>{menu.name}</li> : null
+
+                   )
+                   
+                  //  : null}
+                // return <li key={indx} className='h-16 pt-4'>
+                       
+                //           menu.name
+                    
+                     
+                     
+                //       </li>
+                } )}
+    <li className='h-16 '>
+                            <a href="#" className="flex  items-center w-full">
+                                <img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c4f3.png" className="h-6 sm:h-16 " alt="Flowbite Logo" />
+
+                            </a>
+                        </li>
+{menus.list.map((menu, indx) => {
+                // {indx < props.product.menus[0].list.length / 2  ? 
+                return (
+                  indx > props.product.menus[0].list.length / 2 - 1?  
+<li key={indx} className={`h-16 pt-4`}>{menu.name}</li> : null
+
+                 )
+                  //  : null}
+                // return <li key={indx} className='h-16 pt-4'>
+                       
+                //           menu.name
+                    
+                     
+                     
+                //       </li>
+                } )}
+               
+     
   </ul>
   </div>
   </div>
@@ -93,3 +138,18 @@ export default function CenteredLogoNavBar({ Logo, style, menus }) {
     )
 }
 
+// export default CenteredLogoNavBar;
+const mapStateToProps = state => ({
+  userInfo: state.main,
+  error: state.main,
+  product: state.product,
+})
+
+const mapDispatchToProps = {
+  setProducts: setProducts,
+  setSelectedProductsNull: setSelectedProductsNull,
+  showSections: showSections,
+  showMenus: showMenus
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CenteredLogoNavBar)

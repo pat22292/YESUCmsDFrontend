@@ -91,7 +91,7 @@ export const showMenus = () => async dispatch => {
             payload: apiResponse.data
         })
 
-        console.log(apiResponse.data);
+        // console.log(apiResponse.data);
     } catch (error) {
         console.log(error);
         dispatch({

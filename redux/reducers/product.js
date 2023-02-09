@@ -12,7 +12,8 @@ const product = (state = {
     tempGallery: [],
     tempVarImgs: [],
     sections: [],
-    menus: []
+    menus: [],
+    menuList : []
 
 }, action) => {
     switch (action.type) {
