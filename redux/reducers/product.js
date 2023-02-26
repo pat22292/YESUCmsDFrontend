@@ -13,7 +13,8 @@ const product = (state = {
     tempVarImgs: [],
     sections: [],
     menus: [],
-    menuList: []
+    menuList: [],
+    sectionError: ''
 
 }, action) => {
     switch (action.type) {
@@ -69,6 +70,7 @@ const product = (state = {
         case t.SHOW_SECTIONS:
             return {
                 ...state,
+                sectionError: action.payload,
                 sections: action.payload
             }
         case t.SHOW_MENUS:

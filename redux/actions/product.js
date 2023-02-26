@@ -78,7 +78,7 @@ export const showSections = (id) => async dispatch => {
         console.log(error);
         dispatch({
             type: t.SHOW_SECTIONS,
-            payload: error
+            payload: error.message
         })
     }
 }
@@ -96,7 +96,7 @@ export const showMenus = () => async dispatch => {
         console.log(error);
         dispatch({
             type: t.SHOW_MENUS,
-            payload: error
+            payload: error.message
         })
     }
 }

@@ -3,9 +3,9 @@ import React, { useState } from 'react'
 
 import Skeleton from "react-loading-skeleton";
 
-function CircularLoading() {
+function CircularLoading({ position }) {
     return (
-        <svg className="animate-spin m-auto opacity-20 w-14" x="0px" y="0px"
+        <svg className={`animate-spin m-auto opacity-20 w-14 ${position} mt-4  z-50`} x="0px" y="0px"
             viewBox="0 0 456.817 456.817"
         >
             <g>
