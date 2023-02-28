@@ -48,7 +48,7 @@ function Home(props) {
 
       useEffect(() => {
             props.showSections();
-            props.showMenus()
+            // props.showMenus()
 
       }, []);
 
@@ -124,6 +124,7 @@ function Home(props) {
             <div >
                   {props.product.sectionError != "Network Error" ?
                         <div>
+                              
                               {props.product.sections.length != 0 ?
                                     <div className='  w-full '>
 
@@ -138,8 +139,8 @@ function Home(props) {
 
                                     </div>
                                     :
-                                    <div className=' grid justify-items-center '>
-                                          <CenterLogoLoading />
+                                    <div className=' flex h-screen justify-center items-center z-50'>
+                                          <CircularLoading  position={' absolute'} />
                                     </div>
 
                               }

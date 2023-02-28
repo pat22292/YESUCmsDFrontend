@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useState, useEffect } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { connect } from "react-redux";
@@ -46,7 +46,9 @@ import Link from 'next/link'
 // }
 
 const DefaultNavBar = (props) => {
-
+    useEffect(() => {
+        props.showMenus();
+      }, []);
     // const navigation = [
     //     { name: 'Dashboard', href: '#', current: false },
     //     { name: 'Team', href: '#', current: false },
@@ -66,6 +68,7 @@ const DefaultNavBar = (props) => {
 
     const changeCurrentValue = (index) => {
 
+        
         let newArr = navigation.map((item, i) => {
             if (index == i) {
                 return { ...item, current: true };

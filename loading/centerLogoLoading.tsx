@@ -4,7 +4,7 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 const centerLogoLoading = () => {
     return (
 
-        <div className="">
+        <div className=" absolute z-50">
             < SkeletonTheme color="#e0e0e0" highlightColor="#f5f5f5" >
                 <ul className="flex mt-4 flex-row md:space-x-36 ">
                     <li>

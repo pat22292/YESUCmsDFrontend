@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Logo from "../Logo";
+import CenterLogoLoading from "../../loading/centerLogoLoading";
 
 function CenteredLogoNavBar(props, { children }) {
 
@@ -17,7 +18,7 @@ function CenteredLogoNavBar(props, { children }) {
 
 
   useEffect(() => {
-
+    props.showMenus();
   }, []);
   return (
 
@@ -177,8 +178,8 @@ function CenteredLogoNavBar(props, { children }) {
         </div>
 
       ) : (
-        <div className=' grid justify-items-center '>
-          <CircularLoading position={'absolute'} />
+        <div className='grid justify-items-center z-50'>
+           <CenterLogoLoading />
         </div>
 
       )}
