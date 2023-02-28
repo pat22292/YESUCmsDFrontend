@@ -4,6 +4,7 @@ import axios from 'axios';
 import { connect } from "react-redux";
 import { setProducts, setSelectedProductsNull, showMenus, showSections } from "../redux/actions/product";
 import CircularLoading from '../loading/circularLoading';
+import CenterLogoLoading from '../loading/centerLogoLoading';
 import { motion } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
 import { options } from 'next-auth/client';
@@ -138,7 +139,7 @@ function Home(props) {
                                     </div>
                                     :
                                     <div className=' grid justify-items-center '>
-                                          <CircularLoading position={'absolute'} />
+                                          <CenterLogoLoading />
                                     </div>
 
                               }
