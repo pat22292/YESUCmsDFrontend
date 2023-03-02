@@ -162,15 +162,18 @@ function Home(props) {
                                           effect="coverflow"
                                           loop={true}
                                     >
-                                          <SwiperSlide className="bg-no-repeat bg-cover bg-center shadow-md" style={{ backgroundImage: "url(https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)" }}></SwiperSlide>
-                                          <SwiperSlide className="bg-no-repeat bg-cover bg-center shadow-md" style={{ backgroundImage: "url(https://images.pexels.com/photos/919606/pexels-photo-919606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)" }}></SwiperSlide>
-                                          <SwiperSlide className="bg-no-repeat bg-cover bg-center shadow-md" style={{ backgroundImage: "url(https://images.pexels.com/photos/2835436/pexels-photo-2835436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)" }}></SwiperSlide>
-                                          <SwiperSlide className="bg-no-repeat bg-cover bg-center shadow-md" style={{ backgroundImage: "url(https://images.pexels.com/photos/571169/pexels-photo-571169.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)" }}></SwiperSlide>
+                                          <SwiperSlide className="bg-no-repeat bg-cover bg-center shadow-md grid text-center  place-items-center" style={{ backgroundImage: "url(https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)" }}>1</SwiperSlide>
+                                          <SwiperSlide className="bg-no-repeat bg-cover bg-center shadow-md grid text-center  place-items-center" style={{ backgroundImage: "url(https://images.pexels.com/photos/919606/pexels-photo-919606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)" }}>2</SwiperSlide>
+                                          <SwiperSlide className="bg-no-repeat bg-cover bg-center shadow-md grid text-center  place-items-center" style={{ backgroundImage: "url(https://images.pexels.com/photos/2835436/pexels-photo-2835436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)" }}>3</SwiperSlide>
+                                          <SwiperSlide className="bg-no-repeat bg-cover bg-center shadow-md grid text-center  place-items-center" style={{ backgroundImage: "url(https://images.pexels.com/photos/571169/pexels-photo-571169.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)" }}>4</SwiperSlide>
 
 
 
                                     </Swiper>
                               </div>
+                              <p className="font-shrikhand text-9xl">The quick brown fox ...</p>
+<p className="font-serif">The quick brown fox ...</p>
+<p className="font-mono">The quick brown fox ...</p>
                               <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
                                     <h2 className="sr-only">Products</h2>
                                     <div className="grid grid-cols-2 gap-y-10 gap-x-6  xl:grid-cols-4 xl:gap-x-8">

@@ -13,6 +13,10 @@
 //   variants: {},
 //   plugins: [],
 // }
+
+const defaultTheme = require('tailwindcss/defaultTheme');
+
+
 module.exports = {
   darkMode: 'class',
   future: {
@@ -68,11 +72,16 @@ module.exports = {
 
         '2xl': '1536px',
         // => @media (min-width: 1536px) { ... }
+      },
+      fontFamily: {
+        'shrikhand': ['"Shrikhand"', ...defaultTheme.fontFamily.sans],
+        'nova-flat': '"Nova Flat"'
       }
       // screens: {
       //   dark: { raw: '(prefers-color-scheme: dark)' },
       // },
     },
+    
   },
   variants: {
     extend: {

@@ -67,7 +67,8 @@ function CenteredLogoNavBar(props, { children }) {
                       })}
                       <li className='h-16 '>
                         <a className="flex  items-center w-full">
-                          <svg onClick={() => { }} className=" h-6 sm:h-16" width="199" height="50" viewBox="0 0 199 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <img src={`https://res.cloudinary.com/dbkhak42n/image/upload/v1677733403/${menus.image}`} alt="" />
+                          {/* <svg onClick={() => { }} className=" h-6 sm:h-16" width="199" height="50" viewBox="0 0 199 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M25.3023 22.2182C24.1444 22.2182 23.5646 23.6158 24.3832 24.4333L28.9945 29.037C29.2382 29.2805 29.5688 29.4171 29.9136 29.4171H41.2149C42.3718 29.4171 42.9521 28.0217 42.1356 27.2035L37.5404 22.5998C37.2965 22.3554 36.9653 22.2182 36.6199 22.2182H25.3023Z" fill="url(#paint0_linear_0_1)" />
                             <path d="M22.5968 11.1164C22.5968 9.96041 23.9967 9.38146 24.8153 10.1989L29.4267 14.8028C29.6704 15.0461 29.8073 15.3761 29.8073 15.7203V48.6995C29.8073 49.8557 28.4074 50.4346 27.5886 49.6171L22.9774 45.0134C22.7336 44.7699 22.5968 44.44 22.5968 44.0958V11.1164Z" fill="url(#paint1_linear_0_1)" />
                             <path d="M12.6824 1.29995C12.6824 0.14392 14.0823 -0.435028 14.9011 0.382418L19.5125 4.98622C19.7562 5.22957 19.8931 5.55963 19.8931 5.90377V38.8831C19.8931 40.039 18.4932 40.6181 17.6744 39.8006L13.0631 35.1967C12.8194 34.9534 12.6824 34.6234 12.6824 34.2793V1.29995Z" fill="url(#paint2_linear_0_1)" />
@@ -92,7 +93,7 @@ function CenteredLogoNavBar(props, { children }) {
                                 <stop offset="1" stopColor="#0CC3E9" />
                               </linearGradient>
                             </defs>
-                          </svg>
+                          </svg> */}
                         </a>
                       </li>
                       {props.product.menus[0].content.map((menu, indx) => {
@@ -111,7 +112,7 @@ function CenteredLogoNavBar(props, { children }) {
                             }} passHref
                             >
                               <a target="">
-                                <li className={`h-16 pt-4`}>{menu.name}</li>
+                                <li className={`h-16 pt-4 `}>{menu.name}</li>
                               </a>
                             </Link>
 
@@ -149,7 +150,7 @@ function CenteredLogoNavBar(props, { children }) {
                         </div>
 
 
-                        <Disclosure.Panel className="sm:hidden absolute bg-white w-full mt  z-50">
+                        <Disclosure.Panel className="sm:hidden absolute bg-white w-full mt  z-50 ">
                           <div className="space-y-1 px-2 pt-2 pb-3">
                             {props.product.menus[0].content.map((item) => (
                               <Disclosure.Button
