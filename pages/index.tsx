@@ -1,16 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
-import axios from 'axios';
 import { connect } from "react-redux";
 import { setProducts, setSelectedProductsNull, showMenus, showSections } from "../redux/actions/product";
 import CircularLoading from '../loading/circularLoading';
-import CenterLogoLoading from '../loading/centerLogoLoading';
-import { motion } from 'framer-motion';
-import Typewriter from 'typewriter-effect';
-import { options } from 'next-auth/client';
-import { useRouter } from 'next/router'
-import { gsap } from "gsap";
-import product from '../redux/reducers/product';
 import CenteredLogoNavBar from '../components/navigation/CenteredLogoNavBar';
 import DefaultLogoNavBar from '../components/navigation/DefaultNavBar';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay, Controller, Thumbs, EffectFade, EffectCards, EffectCube, EffectCoverflow } from 'swiper';
@@ -36,7 +28,6 @@ const DynamicCenteredMenubar = dynamic(() => import('../components/navigation/Ce
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, Controller, Thumbs, EffectFade, EffectCards, EffectCube, EffectCoverflow]);
 
 function Home(props) {
-      const router = useRouter();
       const [firstSwiper, setFirstSwiper] = useState(null);
       const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
@@ -199,9 +190,6 @@ function Home(props) {
                         </h1>
                   }
 
-                  {/* {props.product.menuList ? <h1>Meron</h1> : <h1>Wala</h1>  } */}
-                  {/* {parse(props.product.sections[0].section)} */}
-                  {/* <button onClick={() => { console.log(props.product.sections[0].section) }}>Click</button> */}
             </div >
 
       )
