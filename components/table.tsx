@@ -33,7 +33,7 @@ export default function Table({ products, setSelectedProductsNull }) {
 
             return <div key={index} >
 
-              {parse(products[0].section)}
+      
 
             </div>
           })}
