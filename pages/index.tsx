@@ -161,9 +161,9 @@ function Home(props) {
 
                                     </Swiper>
                               </div>
-                              <p className="font-shrikhand text-9xl">The quick brown fox ...</p>
+                              {/* <p className="font-shrikhand text-9xl">The quick brown fox ...</p>
 <p className="font-serif">The quick brown fox ...</p>
-<p className="font-mono">The quick brown fox ...</p>
+<p className="font-mono">The quick brown fox ...</p> */}
                               <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
                                     <h2 className="sr-only">Products</h2>
                                     <div className="grid grid-cols-2 gap-y-10 gap-x-6  xl:grid-cols-4 xl:gap-x-8">
