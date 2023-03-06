@@ -8,7 +8,6 @@ import Loading from '../loading/loading';
 import CircularLoading from '../loading/circularLoading';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import Link from 'next/link'
-import parse from 'html-react-parser';
 
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, Controller, Thumbs]);
