@@ -41,7 +41,7 @@ export default function Table({ products, setSelectedProductsNull }) {
         </div>
       ) : (
         <div className=' h-16 pt-4'>
-          <CircularLoading />
+          <CircularLoading position={' absolute'}  />
         </div>
 
       )}
