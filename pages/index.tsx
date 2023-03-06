@@ -10,7 +10,6 @@ import Typewriter from 'typewriter-effect';
 import { options } from 'next-auth/client';
 import { useRouter } from 'next/router'
 import { gsap } from "gsap";
-import parse, { attributesToProps } from 'html-react-parser';
 import product from '../redux/reducers/product';
 import CenteredLogoNavBar from '../components/navigation/CenteredLogoNavBar';
 import DefaultLogoNavBar from '../components/navigation/DefaultNavBar';
