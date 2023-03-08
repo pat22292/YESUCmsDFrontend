@@ -5,6 +5,8 @@ import { setProducts, setSelectedProductsNull, showMenus, showSections } from ".
 import CircularLoading from '../loading/circularLoading';
 import CenteredLogoNavBar from '../components/navigation/CenteredLogoNavBar';
 import DefaultLogoNavBar from '../components/navigation/DefaultNavBar';
+import ImageSlider from '../components/slider/swiper-slide';
+import Footer from '../components/navigation/DefaultFooter'
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay, Controller, Thumbs, EffectFade, EffectCards, EffectCube, EffectCoverflow } from 'swiper';
 // import axios from 'axios';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -142,32 +144,10 @@ function Home(props) {
 
 
 
-                              <div className='md:h-screen h-96 md:pt-0 pt-24 z-0'>
-                                    <Swiper
-                                          className=" h-full  "
-                                          // style={{ height: '900px' }}
-                                          controller={{ control: firstSwiper }}
-                                          autoplay={{ delay: 3500, disableOnInteraction: false }}
-                                          slidesPerView={3}
-                                          navigation
-                                          thumbs={{ swiper: thumbsSwiper }}
-                                          pagination={{ clickable: true }}
-                                          modules={[EffectCoverflow, EffectCube]}
-                                          effect="coverflow"
-                                          loop={true}
-                                    >
-                                          <SwiperSlide className="bg-no-repeat bg-cover bg-center shadow-md grid text-center  place-items-center" style={{ backgroundImage: "url(https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)" }}>1</SwiperSlide>
-                                          <SwiperSlide className="bg-no-repeat bg-cover bg-center shadow-md grid text-center  place-items-center" style={{ backgroundImage: "url(https://images.pexels.com/photos/919606/pexels-photo-919606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)" }}>2</SwiperSlide>
-                                          <SwiperSlide className="bg-no-repeat bg-cover bg-center shadow-md grid text-center  place-items-center" style={{ backgroundImage: "url(https://images.pexels.com/photos/2835436/pexels-photo-2835436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)" }}>3</SwiperSlide>
-                                          <SwiperSlide className="bg-no-repeat bg-cover bg-center shadow-md grid text-center  place-items-center" style={{ backgroundImage: "url(https://images.pexels.com/photos/571169/pexels-photo-571169.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)" }}>4</SwiperSlide>
-
-
-
-                                    </Swiper>
-                              </div>
+                              <ImageSlider/>
                               {/* <p className="font-shrikhand text-9xl">The quick brown fox ...</p>
-<p className="font-serif">The quick brown fox ...</p>
-<p className="font-mono">The quick brown fox ...</p> */}
+                                    <p className="font-serif">The quick brown fox ...</p>
+                                    <p className="font-mono">The quick brown fox ...</p> */}
                               <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
                                     <h2 className="sr-only">Products</h2>
                                     <div className="grid grid-cols-2 gap-y-10 gap-x-6  xl:grid-cols-4 xl:gap-x-8">
@@ -186,8 +166,7 @@ function Home(props) {
                                           ))}
                                     </div>
                               </div>
-
-
+                              <Footer/>
                         </div> :
                         <h1>
                               Please Check your API connection.
