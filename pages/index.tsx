@@ -117,12 +117,16 @@ function Home(props) {
                               
                               {props.product.sections.length != 0 ?
                                     <div className='  w-full '>
-
+          {props.product.sections[0].component_name == "DefaultLogoNavBar" ? <DefaultLogoNavBar  /> : <CenteredLogoNavBar  />
+}
                                           {props.product.sections.map((section, index) => {
 
                                                 return (
-                                                      section.component_name == "DefaultLogoNavBar" ? <DefaultLogoNavBar key={index} /> : <CenteredLogoNavBar key={index} />
-                                                )
+                                                <div>
+                                                      {/* {section.component_name == "DefaultLogoNavBar" ? <DefaultLogoNavBar key={index} /> : <CenteredLogoNavBar key={index} />
+} */}
+                                                </div>
+                                                      )
 
                                           })}
 
