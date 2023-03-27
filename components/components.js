@@ -4,7 +4,7 @@ import Bar from "../components/testComponents/Bar";
 import Slider from "../components/slider/swiper-slide"
 import CenteredLogoNavBar from '../components/navigation/CenteredLogoNavBar';
 import DefaultLogoNavBar from '../components/navigation/DefaultNavBar';
-import TwoColumn from "./column/two-column";
+import TwoColumn from "./column/twoColumn";
 
 
 const Components = {
