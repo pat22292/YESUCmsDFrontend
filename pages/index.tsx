@@ -10,6 +10,7 @@ import Footer from '../components/navigation/DefaultFooter'
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay, Controller, Thumbs, EffectFade, EffectCards, EffectCube, EffectCoverflow } from 'swiper';
 // import axios from 'axios';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Components from "../components/components";
 
 
 const spring = {
@@ -28,6 +29,33 @@ const DynamicCenteredMenubar = dynamic(() => import('../components/navigation/Ce
       { loading: () => <p>...</p> }
 )
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, Controller, Thumbs, EffectFade, EffectCards, EffectCube, EffectCoverflow]);
+
+const data = {
+      content: {
+            body: [
+                  {
+                        _uid: "X1JAfdsZxy",
+                        component: "slider",
+                        headline: "Another headline"
+                  },
+                  {
+                        _uid: "BUY6Drn9e1",
+                        component: "foo",
+                        headline: "Foo"
+                  },
+                  {
+                        _uid: "gJZoSLkfZV",
+                        component: "bar",
+                        title: "Bar"
+                  },
+                  {
+                        _uid: "X1JAfdsZxy",
+                        component: "foo",
+                        headline: "Another headline"
+                  }
+            ]
+      }
+};
 
 function Home(props) {
       const [firstSwiper, setFirstSwiper] = useState(null);
@@ -116,19 +144,19 @@ function Home(props) {
             <div >
                   {props.product.sectionError != "Network Error" ?
                         <div>
-                              
+
                               {props.product.sections.length != 0 ?
                                     <div className='  w-full '>
-          {props.product.sections[0].component_name == "DefaultLogoNavBar" ? <DefaultLogoNavBar  /> : <CenteredLogoNavBar  />
-}
+                                          {props.product.sections[0].component_name == "DefaultLogoNavBar" ? <DefaultLogoNavBar /> : <CenteredLogoNavBar />
+                                          }
                                           {props.product.sections.map((section, index) => {
 
                                                 return (
-                                                <div>
-                                                      {/* {section.component_name == "DefaultLogoNavBar" ? <DefaultLogoNavBar key={index} /> : <CenteredLogoNavBar key={index} />
+                                                      <div>
+                                                            {/* {section.component_name == "DefaultLogoNavBar" ? <DefaultLogoNavBar key={index} /> : <CenteredLogoNavBar key={index} />
 } */}
-                                                </div>
-                                                      )
+                                                      </div>
+                                                )
 
                                           })}
 
@@ -136,19 +164,20 @@ function Home(props) {
                                     </div>
                                     :
                                     <div className=' flex h-screen justify-center items-center z-50'>
-                                          <CircularLoading  position={' absolute'} />
+                                          <CircularLoading position={' absolute'} />
                                     </div>
 
                               }
 
+                              {props.product.sections.length != 0 ?
+                                    props.product.sections.map(block => <div key={block.id}>{Components(block)}</div>) : null
+                              }
 
-
-
-                              <ImageSlider/>
+                              {/* <ImageSlider /> */}
                               {/* <p className="font-shrikhand text-9xl">The quick brown fox ...</p>
                                     <p className="font-serif">The quick brown fox ...</p>
                                     <p className="font-mono">The quick brown fox ...</p> */}
-                              <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                              {/* <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
                                     <h2 className="sr-only">Products</h2>
                                     <div className="grid grid-cols-2 gap-y-10 gap-x-6  xl:grid-cols-4 xl:gap-x-8">
                                           {products.map((product) => (
@@ -165,8 +194,8 @@ function Home(props) {
                                                 </a>
                                           ))}
                                     </div>
-                              </div>
-                              <Footer/>
+                              </div> */}
+                              <Footer />
                         </div> :
                         <h1>
                               Please Check your API connection.
