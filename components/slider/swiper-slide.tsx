@@ -13,7 +13,8 @@ export default props => {
 
       return <div className={`${props.block.component_styles} md:pt-0  pt-24 z-0`}>
             {/* <h1>{props.block.library_settings ? props.block.library_settings[0].className : null}</h1> */}
-            <h1>{props.block.library_settings ? props.block.library_settings[0].className : null}</h1>
+            {/* <h1>{props.block.library_settings ? props.block.library_settings[0].className : null}</h1> */}
+            <h1>{props.block.component_styles}</h1>
             <Swiper
                   className={`h-full ${props.block.library_settings ? props.block.library_settings[0].className : null}`}
                   //   style={{ height: "50%", width:"50%"}}
