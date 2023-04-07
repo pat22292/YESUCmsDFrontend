@@ -9,13 +9,12 @@ export default props => {
 
       const [firstSwiper, setFirstSwiper] = useState(null);
       const [thumbsSwiper, setThumbsSwiper] = useState(null);
-      const [style, setStyle] = useState(props.block.component_styles);
-      const [styleTwo, setStyleTwo] = useState(props.block.component_styles);
 
-      return <div className={`${style} md:pt-0  pt-24 z-0`}>
+
+      return <div className={`${props.block.component_styles} md:pt-0  pt-24 z-0`}>
             {/* <h1>{props.block.library_settings ? props.block.library_settings[0].className : null}</h1> */}
             {/* <h1>{props.block.library_settings ? props.block.library_settings[0].className : null}</h1> */}
-            <h1>{style}</h1>
+            {/* <h1>{props.block.library_settings[0].className}</h1> */}
             <Swiper
                   className={`h-full ${props.block.library_settings ? props.block.library_settings[0].className : null}`}
                   //   style={{ height: "50%", width:"50%"}}
