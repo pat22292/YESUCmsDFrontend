@@ -30,32 +30,6 @@ const DynamicCenteredMenubar = dynamic(() => import('../components/navigation/Ce
 )
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, Controller, Thumbs, EffectFade, EffectCards, EffectCube, EffectCoverflow]);
 
-const data = {
-      content: {
-            body: [
-                  {
-                        _uid: "X1JAfdsZxy",
-                        component: "slider",
-                        headline: "Another headline"
-                  },
-                  {
-                        _uid: "BUY6Drn9e1",
-                        component: "foo",
-                        headline: "Foo"
-                  },
-                  {
-                        _uid: "gJZoSLkfZV",
-                        component: "bar",
-                        title: "Bar"
-                  },
-                  {
-                        _uid: "X1JAfdsZxy",
-                        component: "foo",
-                        headline: "Another headline"
-                  }
-            ]
-      }
-};
 
 function Home(props) {
       const [firstSwiper, setFirstSwiper] = useState(null);
@@ -146,20 +120,10 @@ function Home(props) {
                         <div>
 
                               {props.product.sections.length != 0 ?
-                                    <div className='  w-full '>
-                                          {props.product.sections[0].component_name == "DefaultLogoNavBar" ? <DefaultLogoNavBar /> : <CenteredLogoNavBar />
+                                    <div>
+                                          {props.product.sections.length != 0 ?
+                                                props.product.sections.map(block => <div key={block.id}>{Components(block)}</div>) : null
                                           }
-                                          {props.product.sections.map((section, index) => {
-
-                                                return (
-                                                      <div>
-                                                            {/* {section.component_name == "DefaultLogoNavBar" ? <DefaultLogoNavBar key={index} /> : <CenteredLogoNavBar key={index} />
-} */}
-                                                      </div>
-                                                )
-
-                                          })}
-
 
                                     </div>
                                     :
@@ -169,9 +133,6 @@ function Home(props) {
 
                               }
 
-                              {props.product.sections.length != 0 ?
-                                    props.product.sections.map(block => <div key={block.id}>{Components(block)}</div>) : null
-                              }
 
                               {/* <ImageSlider /> */}
                               {/* <p className="font-shrikhand text-9xl">The quick brown fox ...</p>

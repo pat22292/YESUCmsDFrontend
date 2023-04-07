@@ -149,18 +149,34 @@ function CenteredLogoNavBar(props, { children }) {
 
                         </div>
 
-
                         <Disclosure.Panel className="sm:hidden absolute bg-white w-full mt  z-50 ">
                           <div className="space-y-1 px-2 pt-2 pb-3">
-                            {props.product.menus[0].content.map((item) => (
-                              <Disclosure.Button
-                                key={item.name}
-                                as="a"
-                                href={item.link}
-                                className={'text-gray-800 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'}
+                            {props.product.menus[0].content.map((item, indx) => (
+
+                              // <Disclosure.Button
+                              //   key={item.name}
+                              //   as="a"
+                              //   href={item.link}
+                              //   className={'text-gray-800 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'}
+                              // >
+                              //   {item.name}
+                              // </Disclosure.Button>
+
+                              <Link key={indx} href={{
+
+                                pathname: `/${item.link}`,
+                                // query: {
+                                //   name: product.product_name,
+                                //   id: product.id,
+                                //   img: product.img_id
+                                // },
+
+                              }} passHref
                               >
-                                {item.name}
-                              </Disclosure.Button>
+                                <a target="">
+                                  <li className={`text-gray-800 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium`}>{item.name}</li>
+                                </a>
+                              </Link>
                             ))}
                           </div>
                         </Disclosure.Panel>
@@ -180,7 +196,7 @@ function CenteredLogoNavBar(props, { children }) {
 
       ) : (
         <div className='grid justify-items-center z-50'>
-           <CenterLogoLoading />
+          <CenterLogoLoading />
         </div>
 
       )}
