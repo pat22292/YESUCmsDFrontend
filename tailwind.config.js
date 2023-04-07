@@ -81,7 +81,7 @@ module.exports = {
       //   dark: { raw: '(prefers-color-scheme: dark)' },
       // },
     },
-    
+
   },
   variants: {
     extend: {

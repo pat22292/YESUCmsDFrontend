@@ -9,14 +9,15 @@ export default props => {
 
       const [firstSwiper, setFirstSwiper] = useState(null);
       const [thumbsSwiper, setThumbsSwiper] = useState(null);
+      const [style, setStyle] = useState(props.block.component_styles);
+      const [styleTwo, setStyleTwo] = useState(props.block.component_styles);
 
-
-      return <div className={`${props.block.component_styles.toString()} md:pt-0  pt-24 z-0`}>
+      return <div className={`${style} md:pt-0  pt-24 z-0`}>
             {/* <h1>{props.block.library_settings ? props.block.library_settings[0].className : null}</h1> */}
             {/* <h1>{props.block.library_settings ? props.block.library_settings[0].className : null}</h1> */}
-            <h1>{props.block.component_styles}</h1>
+            <h1>{style}</h1>
             <Swiper
-                  className={`h-full ${props.block.library_settings ? props.block.library_settings[0].className.toString() : null}`}
+                  className={`h-full ${props.block.library_settings ? props.block.library_settings[0].className : null}`}
                   //   style={{ height: "50%", width:"50%"}}
                   controller={{ control: firstSwiper }}
                   autoplay={{ delay: 3500, disableOnInteraction: false }}
