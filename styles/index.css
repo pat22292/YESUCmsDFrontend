@@ -173,6 +173,12 @@ input[type=number] {
   .navbar-popup {
     right: 36px !important;
   }
+
+  .svg-right {
+    width: 40% !important;
+    bottom: 0 !important;
+    right: 0 !important;
+  }
 }
 
 .Google-button {
@@ -252,149 +258,152 @@ input[type=number] {
  
 } */
 
-
-
-.custom-text-shadow {
-  text-shadow: -3px 2px 4px rgba(0, 0, 0, 0.47);
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
-.box {
-  width: 200px;
-  height: 80px;
-  border-radius: 50px;
-  background: #00ccff;
-  cursor: pointer;
-}
-
-.budd {
-  width: 100vw;
-  height: 100vh;
-  background: #fff;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-user-select: none;
-  /* Safari */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* IE10+/Edge */
-  user-select: none;
-  /* Standard */
-}
-
-circle,
-rect,
-line {
-  stroke-width: 10px;
-  stroke-linecap: round;
-  fill: transparent;
-}
-
-.typewriter-nl {
-  white-space: pre-line;
-}
-
-@media screen and (orientation:portrait) {
-  .left-shadow {
-    box-shadow: none !important;
-  }
-}
-
-@media screen and (orientation:landscape) {
-  .left-shadow {
-    box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.65);
-  }
-
-}
-
-
-.blinking-cursor {
-  /* font-weight: 100;
-  font-size: 30px;
-  color: #2E3D48; */
-  -webkit-animation: 1s blink step-end infinite;
-  -moz-animation: 1s blink step-end infinite;
-  -ms-animation: 1s blink step-end infinite;
-  -o-animation: 1s blink step-end infinite;
-  animation: 1s blink step-end infinite;
-}
-
-@keyframes blink {
-
-  from,
-  to {
-    color: transparent;
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
   }
 
   50% {
-    color: black;
+    transform: translate(0, 32px);
+  }
+
+  100% {
+    transform: translate(0, -0px);
   }
 }
 
-@-moz-keyframes blink {
+.floating-4 {
+  animation-name: floating;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
 
-  from,
-  to {
-    color: transparent;
+@keyframes floating-4 {
+  0% {
+    transform: translate(0, 0px);
   }
 
   50% {
-    color: black;
+    transform: translate(0, 32px);
+  }
+
+  100% {
+    transform: translate(0, -0px);
   }
 }
 
-@-webkit-keyframes blink {
 
-  from,
-  to {
-    color: transparent;
+
+.one-service {
+  animation-name: one-service;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes one-service {
+  0% {
+    transform: translate(0, 0px);
   }
 
   50% {
-    color: black;
+    transform: translate(5px, 0);
+  }
+
+  100% {
+    transform: translate(0, 0px);
   }
 }
 
-@-ms-keyframes blink {
 
-  from,
-  to {
-    color: transparent;
+.two-service {
+  animation-name: two-service;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes two-service {
+  0% {
+    transform: translate(0, 0px);
   }
 
   50% {
-    color: black;
+    transform: translate(5px, 0);
+  }
+
+  100% {
+    transform: translate(0, 0px);
   }
 }
 
-@-o-keyframes blink {
+.three-service {
+  animation-name: three-service;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
 
-  from,
-  to {
-    color: transparent;
+@keyframes three-service {
+  0% {
+    transform: translate(0, 0px);
   }
 
   50% {
-    color: black;
+    transform: translate(5px, 0);
+  }
+
+  100% {
+    transform: translate(0, 0px);
   }
 }
 
-.containerMotion {
-  width: 150px;
-  height: 150px;
-  background: skyblue;
-  border-radius: 30px;
+.four-service {
+  animation-name: four-service;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
-.item-motion {
-  width: 100%;
-  overflow: visible;
-  stroke: #4b88c8;
-  stroke-width: 2;
-  stroke-linejoin: round;
-  stroke-linecap: round;
+@keyframes four-service {
+  0% {
+    transform: translate(0, 0px);
+  }
+
+  50% {
+    transform: translate(5px, 0);
+  }
+
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+
+.five-service {
+  animation-name: five-service;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes five-service {
+  0% {
+    transform: translate(0, 0px);
+  }
+
+  50% {
+    transform: translate(5px, 0);
+  }
+
+  100% {
+    transform: translate(0, 0px);
+  }
 }
