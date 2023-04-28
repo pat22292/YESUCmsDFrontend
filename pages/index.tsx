@@ -256,9 +256,9 @@ function Home(props) {
             <div >
                   {props.product.sectionError != "Network Error" ?
                         <div className="dark:bg-gray-800">
-                              
-    <LargeSVGBanner />
-                        <SvgRight />
+
+                              {/* <LargeSVGBanner />
+                        <SvgRight /> */}
                               {props.product.sections.length != 0 ?
                                     <div>
                                           {props.product.sections.length != 0 ?

@@ -11,7 +11,7 @@ export default props => {
       const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
 
-      return <div className={`${props.block.component_styles} md:pt-0  pt-24 z-0`}>
+      return <div className={`${props.block.component_styles} md:pt-0  pt-24 z-0 h`}>
             {/* <h1>{props.block.library_settings ? props.block.library_settings[0].className : null}</h1> */}
             {/* <h1>{props.block.library_settings ? props.block.library_settings[0].className : null}</h1> */}
             {/* <h1>{props.block.library_settings[0].className}</h1> */}
