@@ -36,7 +36,7 @@ function CenteredLogoNavBar(props, { children }) {
                 <div className="  mx-auto">
                   <div className="hidden w-full absolute  md:grid justify-items-center" id="navbar-default">
 
-                    <ul className="flex mt-4 flex-row md:space-x-28 ">
+                    <ul className="flex mt-4 flex-row 2xl:space-x-36 space-x-28">
 
                       {props.product.menus[0].content.map((menu, indx) => {
                         // {indx < props.product.menus[0].content.length / 2  ? 
