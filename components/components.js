@@ -5,20 +5,19 @@ import Slider from "../components/slider/swiper-slide"
 import CenteredLogoNavBar from '../components/navigation/CenteredLogoNavBar';
 import DefaultLogoNavBar from '../components/navigation/DefaultNavBar';
 import TwoColumn from "./column/twoColumn";
+import ComponentsList from "../components/componentsList"
 
-
-const Components = {
-    foo: Foo,
-    bar: Bar,
-    slider: Slider,
-    CenteredLogoNavBar: CenteredLogoNavBar,
-    twoColumn: TwoColumn
-
-};
+// const Components = {
+//     foo: Foo,
+//     bar: Bar,
+//     slider: Slider,
+//     CenteredLogoNavBar: CenteredLogoNavBar,
+//     twoColumn: TwoColumn
+// };
 
 export default block => {
-    if (typeof Components[block.component_name] !== "undefined") {
-        return React.createElement(Components[block.component_name], {
+    if (typeof ComponentsList[block.component_name] !== "undefined") {
+        return React.createElement(ComponentsList[block.component_name], {
             key: block.id,
             block: block
         });
