@@ -24,14 +24,14 @@ export default () => {
 
     useEffect(() => {
 
-        // for (const property in ComponentsList) {
-        //     // console.log(property); // Outputs: foo, fiz or fiz, foo
-        //     listComp.push(property.toString())
-        // }
+        for (const property in ComponentsList) {
+            // console.log(property); // Outputs: foo, fiz or fiz, foo
+            listComp.push(property.toString())
+        }
 
         // $targetEl = document.getElementById('drawer-js-example');
         
-        // setComponentList(listComp);
+        setComponentList(listComp);
         // console.log(drawer.isVisible());
         // console.log(drawerRef.current.id);
         // drawer.show();
@@ -125,7 +125,7 @@ export default () => {
    </div>
 </div>
 
-            {/* <Menu as="div" className="relative inline-block text-left">
+            <Menu as="div" className="relative inline-block text-left">
                 <div>
                     <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
                         Options
@@ -178,7 +178,7 @@ export default () => {
                         </div>
                     </Menu.Items>
                 </Transition>
-            </Menu> */}
+            </Menu>
 
         </div>
     )
