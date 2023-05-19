@@ -93,15 +93,8 @@ module.exports = {
 
     }
   },
-  content: [
-    "./node_modules/flowbite-react/**/*.js",
-    "./pages/**/*.{ts,tsx}",
-    "./Layouts/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./public/**/*.html",
-  ],
+  
   plugins: [
     require('@tailwindcss/forms'),
-    require("flowbite/plugin")
   ],
 }
