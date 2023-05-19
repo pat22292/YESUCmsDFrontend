@@ -41,6 +41,7 @@
     "redux": "^4.1.1",
     "redux-thunk": "^2.4.0",
     "swiper": "^7.2.0",
+    "tailwindcss-animated": "^1.0.1",
     "typewriter-effect": "^2.19.0",
     "use-dark-mode": "^2.3.1"
   },

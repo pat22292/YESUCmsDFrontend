@@ -26,6 +26,7 @@ module.exports = {
   options: {
     safelist: {
       standard: [
+        /translate-*^[\w:]/,
         /gap-x-*^[\w:]/,
         /gap-y-*^[\w:]/,
         /right-*^[\w:]/,
@@ -96,5 +97,7 @@ module.exports = {
   
   plugins: [
     require('@tailwindcss/forms'),
+    require('tailwindcss-animated')
+
   ],
 }
