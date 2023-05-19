@@ -41,7 +41,7 @@ export default () => {
     }, [ComponentsList])
     // const list = ComponentsList;
     return (
-        <div  className="bg-no-repeat bg-cover bg-center shadow-md grid text-center place-items-center h-screen">
+        <div  className="bg-no-repeat bg-cover bg-center shadow-md grid place-items-center h-screen">
             {/* {ComponentsList['foo'].toString()} */}
             
 <div className="text-center">
