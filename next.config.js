@@ -1,6 +1,8 @@
 const withTM = require("next-transpile-modules")([
   "swiper",
-  "framer-motion"
+  "framer-motion",
+  "flowbite",
+  "flowbite-react"
   // "escape-string-regexp",
   // "@sindresorhus/transliterate",
 ]); // pass the modules you would like to see transpiled

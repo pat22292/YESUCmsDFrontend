@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import PropTypes from 'prop-types';
 import '../styles/index.css'
 import { wrapper } from "../redux/store"
+import 'flowbite';
 // import 'swiper/swiper.scss';
 // import 'swiper/components/navigation/navigation.scss';
 // import 'swiper/components/pagination/pagination.scss';
